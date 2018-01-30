@@ -1,6 +1,6 @@
 # Drop-seq aligment pipeline
 
-This is a snakemake implementation of the Drop-seq alignment pipeline based on Drop-seq tools provided by the [McCarroll lab](http://mccarrolllab.com/dropseq/).
+This is a Snakemake implementation of the Drop-seq alignment pipeline based on Drop-seq tools provided by the [McCarroll lab](http://mccarrolllab.com/dropseq/).
 
 Paired-end raw data is expected to be stored in fastq format in directories named after samples. Currently the pipeline expects that files in these directories end with ".\*sample_1_sequence.txt.gz", respectively ".\*sample_2_sequence.txt.gz" for the first and second read. E.g.: "exp1/dropseq_exp1_1_sequence.txt.gz" & "exp1/dropseq_exp1_2_sequence.txt.gz". If this does not suit your setup, you can easily change this by adapting the fastq_to_bam input function in the Snakefile.
 
@@ -10,7 +10,7 @@ A good way to use this pipeline is in a conda environment, as this ensures that 
 
 ```
 # clone pipeline into working directory
-git clone ... path/to/workdir
+git clone https://github.com/argschwind/dropseq_alignment_pipeline.git path/to/workdir
 cd path/to/workdir
 
 # download Drop-seq tools
