@@ -1,0 +1,14 @@
+channels:
+  - defaults
+  - bioconda
+  - r
+dependencies:
+  - python=3.6.4
+  - snakemake=3.13.3
+  - star=2.5.3a
+  - r=3.4.2
+  - r-ggplot2=2.2.1
+  - r-knitr=1.17
+  - r-rmarkdown=1.6
+  - r-plotly=4.7.1
+  - r-purrr=0.2.3

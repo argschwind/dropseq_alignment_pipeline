@@ -1,0 +1,44 @@
+# sample id: /path/to/fastq/directory
+samples:
+  exp1: path/to/exp1
+  exp2: path/to/exp2
+
+# rough a priori estimate of the number of sequenced cells per sample
+expect_cell_numbers:
+  T4ea: ...
+  W4ea: ...
+
+# parameters for individual rules
+tag_cell_barcodes:
+  base_quality: 10
+  num_bases_below_quality: 1
+
+tag_molecule_barcodes:
+  base_quality: 10
+  num_bases_below_quality: 1
+
+trim_starting_sequence:
+  adapter_sequence: "AAGCAGTGGTATCAACGCAGAGTGAATGGG"
+  mismatches: 0
+  num_bases: 5
+
+trim_polyA:
+  mismatches: 0
+  num_bases: 6
+
+star_align:
+  genomedir: alignment_reference/genomeDir
+  threads: 5
+
+merge_bam:
+  reference: alignment_reference/genome.fasta
+
+tag_with_gene_exon:
+  annotations_file: alignment_reference/genome.refFlat
+
+bead_synthesis_error:
+  min_umis_per_cell: 25
+  max_num_errors: 1
+  read_mq: 10
+  primer_sequence: null
+  edit_distance: 0
