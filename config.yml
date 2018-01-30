@@ -5,8 +5,8 @@ samples:
 
 # rough a priori estimate of the number of sequenced cells per sample
 expect_cell_numbers:
-  T4ea: ...
-  W4ea: ...
+  exp1: ...
+  exp2: ...
 
 # parameters for individual rules
 tag_cell_barcodes:
@@ -18,7 +18,7 @@ tag_molecule_barcodes:
   num_bases_below_quality: 1
 
 trim_starting_sequence:
-  adapter_sequence: "AAGCAGTGGTATCAACGCAGAGTGAATGGG"
+  adapter_sequence: AAGCAGTGGTATCAACGCAGAGTGAATGGG
   mismatches: 0
   num_bases: 5
 
@@ -27,14 +27,14 @@ trim_polyA:
   num_bases: 6
 
 star_align:
-  genomedir: alignment_reference/genomeDir
+  genomedir: path/to/genomeDir
   threads: 5
 
 merge_bam:
-  reference: alignment_reference/genome.fasta
+  reference: path/to/genome.fasta
 
 tag_with_gene_exon:
-  annotations_file: alignment_reference/genome.refFlat
+  annotations_file: path/to/genome.refFlat
 
 bead_synthesis_error:
   min_umis_per_cell: 25
