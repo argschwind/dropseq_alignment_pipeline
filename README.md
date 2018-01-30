@@ -1,4 +1,4 @@
-# Drop-seq aligment pipeline
+# Drop-seq alignment pipeline
 
 This is a Snakemake implementation of the Drop-seq alignment pipeline based on Drop-seq tools provided by the [McCarroll lab](http://mccarrolllab.com/dropseq/).
 
