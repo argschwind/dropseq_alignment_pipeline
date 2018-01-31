@@ -12,3 +12,4 @@ dependencies:
   - r-rmarkdown=1.6
   - r-plotly=4.7.1
   - r-purrr=0.2.3
+  - pandoc=1.19.2.1
