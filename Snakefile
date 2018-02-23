@@ -177,10 +177,11 @@ rule star_align:
     "--genomeDir {params.genomedir} "
     "--readFilesIn {input} "
     "--outFileNamePrefix {params.outprefix} "
-    "--outSAMtype BAM Unsorted "
+    "--outSAMtype BAM Unsorted ; "
     # move STAR "progress" logs into log directory
-    "&& mv {wildcards.sample}/star.Log.out {wildcards.sample}/logs "
-    "&& mv {wildcards.sample}/star.Log.progress.out {wildcards.sample}/logs"
+    "mv {wildcards.sample}/star.Log.progress.out {wildcards.sample}/logs ; "
+    "mv {wildcards.sample}/star.Log.out {wildcards.sample}/logs"
+
 
 # sort aligned reads
 rule sort_aligned:
